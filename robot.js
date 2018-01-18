@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-
+  
   const board = [
     ['T', 'T', '.', 'F'],
     ['T', '.', '.', '.'],
@@ -17,6 +17,7 @@
   let moves = 0;
   let turns = 0;
   let applesEaten = 0;
+
 
   const trailIndicators = {
     left: '←',
@@ -73,7 +74,7 @@
     elem.innerHTML = '';
 
     board[robot.y][robot.x] = 'R' + trailIndicators[robot.dir];
-
+//  how we can access to the attributes of a tag in html whom is verified in js! for example the cells in this table
     const table = document.createElement('table');
     elem.appendChild(table);
     for (let row = board.length - 1; row >= 0; row--) {
@@ -111,15 +112,17 @@
 
     const cell = board[y][x];
 
+     
     if (cell === '.' || cell === 'F' || cell === 'A') {
       board[robot.y][robot.x] = trailIndicators[robot.dir];
       robot.x = x;
       robot.y = y;
       if (cell === 'F') {
         console.log(`flag reached in ${moves} moves and ${turns} turns`);
-        if (applesEaten > 0) {
+
+        applesEaten = applesEaten > 0 ? applesEaten : 0;
           console.log('total apples eaten: ' + applesEaten);
-        }
+        
       } else if (cell === 'A') {
         applesEaten += 1;
         console.log('apple eaten: YUM');
@@ -133,12 +136,10 @@
   }
 
   function turn(turnDirection) {
-    if (turnDirection !== 'left' && turnDirection !== 'right') {
-      console.log('ignoring invalid turn', turnDirection);
-      return;
-    }
-
-    console.log('executing turn()');
+  
+    const invalidTurn = turnDirection !== 'left' && turnDirection !== 'right' ? 'ignoring invalid turn'+ turnDirection : 'executing turn()';
+    
+    console.log(invalidTurn);
 
     switch (robot.dir) {
       case 'up':

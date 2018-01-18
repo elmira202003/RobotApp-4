@@ -1,12 +1,12 @@
 body {
-  background-color: #6a5f77;
+  background-color: #27566B;
 }
 
 #root {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 720px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -18,15 +18,16 @@ body {
     margin-top: 16px;
     margin-bottom: 32px;
     padding: 4px;
-    background-color: #454545;
-    border-radius: 4px;
+    background-color: #6E92A1;
+    border-radius: 10px;
 }
 
 table {
-    border: 5px solid orange;
+    border: 5px ridge orange;
     border-collapse: collapse;
-    background-color: white;
+    background-color: rgb(234, 239, 241);
 }
+
 
 td {
     border: 1px solid black;
@@ -53,14 +54,14 @@ td.right {
 }
 
 td.at-flag {
-    background-color: green;
+    background-color:green;
 }
 
 button {
   margin: 8px 4px;
   padding: 8px;
-  background-color: #89bd49;
+  background-color: #103D50;
   color: white;
   border: none;
   border-radius: 4px;
-}
+} 
