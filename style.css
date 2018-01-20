@@ -1,5 +1,5 @@
 body {
-  background-color: #6a5f77;
+  background-color: #185564;
 }
 
 #root {
@@ -35,7 +35,22 @@ td {
     text-align: center;
     vertical-align: middle;
 }
-
+#flag {
+    background-size: 100%;
+    background-image: url(http://www.clker.com/cliparts/e/6/a/9/1216829321427973809red_flag.svg.med.png);
+}
+.tree {
+    background-size: 100%;
+    background-image: url(http://clipart-library.com/img/1751853.jpg);
+}
+#water {
+    background-size: 100%;
+    background-image: url(http://cdn01.wallconvert.com/_media/wallpapers_1920x1200/1/1/digital-sea-6567.jpg);
+}
+#robo {
+    background-size: 100%;
+    background-image: url(https://publicdomainvectors.org/photos/nicubunu_Comic_characters_Older.png);
+}
 td.up {
     transform: rotate(0);
 }
@@ -59,7 +74,7 @@ td.at-flag {
 button {
   margin: 8px 4px;
   padding: 8px;
-  background-color: #89bd49;
+  background-color: #c08036;
   color: white;
   border: none;
   border-radius: 4px;
